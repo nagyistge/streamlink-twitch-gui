@@ -1,6 +1,7 @@
 import main from "root/config/main.json";
 import dirs from "root/config/dirs.json";
 import log from "root/config/log.json";
+import locales from "root/config/locales.json";
 import files from "!files-from-json-loader!root/config/files.json";
 import vars from "root/config/vars.json";
 import update from "root/config/update.json";
@@ -17,6 +18,7 @@ export {
 	main,
 	dirs,
 	log,
+	locales,
 	files,
 	vars,
 	update,

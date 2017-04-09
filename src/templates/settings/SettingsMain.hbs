@@ -1,13 +1,20 @@
 <fieldset>
 {{#settings-row
+	"Language"
+	"Select a GUI language."
+	icon="fa-language"
+}}
+	{{drop-down value=model.gui_language content=languages}}
+{{/settings-row}}
+
+{{#settings-row
 	"Settings and features"
 	"Enable hidden settings and features.<br>Does not only apply to the settings menu."
 	icon="fa-unlock-alt"
 }}
 	{{check-box "Enable advanced settings and features" checked=model.advanced}}
 {{/settings-row}}
-</fieldset>
-<fieldset>
+
 {{#settings-row
 	"Theme"
 	"Select a GUI color theme."

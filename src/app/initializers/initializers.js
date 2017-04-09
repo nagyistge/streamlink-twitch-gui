@@ -1,5 +1,7 @@
 import "./logger";
 import "./localstorage";
+import "./env";
+import "./i18n";
 import "./routing-service";
 import "./application-view";
 import "./nwjs";

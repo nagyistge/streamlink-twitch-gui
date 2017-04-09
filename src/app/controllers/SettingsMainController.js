@@ -2,15 +2,27 @@ import {
 	computed,
 	Controller
 } from "ember";
-import { themes } from "config";
+import {
+	locales as localesConfig,
+	themes as themesConfig
+} from "config";
 
 
-const { themes: themesList } = themes;
+const { locales } = localesConfig;
+const { themes } = themesConfig;
 
 
 export default Controller.extend({
+	languages: computed(function() {
+		return Object.keys( locales )
+			.map( key => ({
+				id: key,
+				label: locales[ key ]
+			}) );
+	}),
+
 	themes: computed(function() {
-		return themesList.map( id => {
+		return themes.map( id => {
 			const label = id.substr( 0, 1 ).toUpperCase() + id.substr( 1 );
 
 			return { id, label };

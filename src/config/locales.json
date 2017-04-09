@@ -1,0 +1,7 @@
+{
+	"default": "en",
+	"locales": {
+		"en": "English",
+		"de": "Deutsch"
+	}
+}

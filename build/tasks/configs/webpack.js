@@ -66,6 +66,10 @@ const commonLoaders = [
 		loader: "raw-loader"
 	},
 	{
+		test: /\.ya?ml$/,
+		use: [ "json-loader", "yaml-loader" ]
+	},
+	{
 		test: /metadata\.js$/,
 		loader: "metadata-loader",
 		options: {
@@ -211,6 +215,7 @@ module.exports = {
 				"config"      : r( pApp, "config" ),
 				"nwjs"        : r( pApp, "nwjs" ),
 				"initializers": r( pApp, "initializers" ),
+				"locales"     : r( pApp, "locales" ),
 				"mixins"      : r( pApp, "mixins" ),
 				"services"    : r( pApp, "services" ),
 				"helpers"     : r( pApp, "helpers" ),

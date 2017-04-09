@@ -7,6 +7,7 @@ import {
 	Model
 } from "ember-data";
 import {
+	locales,
 	streamprovider,
 	players,
 	langs
@@ -22,6 +23,7 @@ import {
 
 
 const { MAX_SAFE_INTEGER: MAX } = Number;
+const { "default": defaultLocale } = locales;
 const {
 	providers,
 	"default-provider": defaultProvider
@@ -131,6 +133,7 @@ export default Model.extend({
 	player_passthrough  : attr( "string",  { defaultValue: "http" } ),
 	player_reconnect    : attr( "boolean", { defaultValue: true } ),
 	player_no_close     : attr( "boolean", { defaultValue: false } ),
+	gui_language        : attr( "string",  { defaultValue: defaultLocale } ),
 	gui_theme           : attr( "string",  { defaultValue: "default" } ),
 	gui_smoothscroll    : attr( "boolean", { defaultValue: true } ),
 	gui_integration     : attr( "number",  { defaultValue: 3 } ),
