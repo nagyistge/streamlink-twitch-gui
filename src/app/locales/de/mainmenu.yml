@@ -1,0 +1,17 @@
+browse:
+    header: "Verzeichnis"
+    featured: "Hervorgehoben"
+    games: "Spiele"
+    communities: "Communitys"
+    streams: "Streams"
+my:
+    header: "Meine"
+    subscriptions: "Abonnements"
+    live-streams: "Live Streams"
+    hosted-streams: "Gehostete Streams"
+    channels: "Kanäle"
+    games: "Spiele"
+misc:
+    header: "Sonstiges"
+    settings: "Einstellungen"
+    about: "Über"
