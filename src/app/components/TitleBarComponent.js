@@ -26,9 +26,6 @@ export default Component.extend({
 
 	dev: DEBUG,
 
-	nl: "\n",
-
-
 	actions: {
 		goto() {
 			get( this, "routing" ).transitionTo( ...arguments );

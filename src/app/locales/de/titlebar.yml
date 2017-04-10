@@ -1,0 +1,2 @@
+loggedout: "Du bist nicht eingeloggt"
+loggedin: "Eingeloggt als {{name}}\n{{status}}"

@@ -1,0 +1,8 @@
+placeholder: "Suchen"
+filter: "Ergebnisse filtern"
+filters:
+    All: "Alles"
+    Game: "Spiele"
+    Channel: "Kanäle"
+    Stream: "Streams"
+recent: "Vorige Suchanfragen"
