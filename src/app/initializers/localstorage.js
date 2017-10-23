@@ -120,6 +120,27 @@ function upgradeSettings() {
 	// map quality number IDs to strings
 	_upgradeQuality( settings );
 
+	// use new streaming model fragments
+	if ( !settings.hasOwnProperty( "streaming" ) ) {
+		const streaming = settings.streaming = {};
+		const mapping = {
+			provider: "streamprovider",
+			providers: "streamproviders",
+			oauth: "streamprovider_oauth",
+			player_passthrough: "player_passthrough",
+			player_reconnect: "player_reconnect",
+			player_no_close: "player_no_close",
+			hls_live_edge: "hls_live_edge",
+			hls_segment_threads: "hls_segment_threads",
+			retry_open: "retry_open",
+			retry_streams: "retry_streams"
+		};
+		for ( const [ newKey, oldKey ] of Object.entries( mapping ) ) {
+			streaming[ newKey ] = settings[ oldKey ];
+			delete settings[ oldKey ];
+		}
+	}
+
 	LS.setItem( "settings", JSON.stringify( data ) );
 }
 
