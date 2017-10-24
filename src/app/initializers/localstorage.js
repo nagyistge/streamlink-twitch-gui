@@ -126,6 +126,9 @@ function upgradeSettings() {
 		const mapping = {
 			provider: "streamprovider",
 			providers: "streamproviders",
+			quality: "quality",
+			qualities: "qualities",
+			qualitiesOld: "quality_presets",
 			oauth: "streamprovider_oauth",
 			player_passthrough: "player_passthrough",
 			player_reconnect: "player_reconnect",

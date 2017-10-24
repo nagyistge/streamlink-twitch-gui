@@ -106,7 +106,7 @@ export default Service.extend( ChannelSettingsMixin, {
 			id,
 			channel,
 			stream: twitchStream,
-			quality: get( this, "settings.quality" ),
+			quality: get( this, "settings.streaming.quality" ),
 			gui_openchat: get( this, "settings.gui_openchat" ),
 			started: new Date()
 		});
